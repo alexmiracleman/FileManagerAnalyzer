@@ -10,7 +10,7 @@ public class FileAnalyzerTest {
     @Test
     public void analyzeWordAndCount() throws IOException {
         FileAnalyzer fileAnalyzer = new FileAnalyzer();
-        System.out.println(fileAnalyzer.analyze("duck", "src/test/Resources/story.txt"));
+        fileAnalyzer.analyze("duck", "src/test/Resources/story.txt");
 
 
     }

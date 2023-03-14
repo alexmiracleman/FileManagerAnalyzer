@@ -19,14 +19,13 @@ public class FileAnalyzer {
         String content = readContent(path);
         List<String> sentences = breakIntoSentences(content);
         List<String> filteredSentences = containsInSentence(sentences, word);
+        int count = countWord(filteredSentences, word);
+
+        System.out.println("The searched word \"" + word + "\" in the file counted " + count + " time(s).");
+        System.out.println();
         for (String filteredSentence : filteredSentences) {
             System.out.println(filteredSentence);
-
         }
-
-        int count = countWord(filteredSentences, word);
-        System.out.println(count);
-
         return new FileStatistics(filteredSentences, count);
     }
 
